@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login & Sign Up Page</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1>Welcome to the Login System</h1>
+    <p>Built by Edzisani Madima</p>
+  </header>
+
+  <div class="container">
+    <div class="tab-buttons">
+      <button class="tab-btn active" data-tab="login">Login</button>
+      <button class="tab-btn" data-tab="signup">Sign Up</button>
+    </div>
+
+    <!-- Login Form -->
+    <div id="login" class="form-container active">
+      <h2>Login to Your Account</h2>
+      <form id="loginForm" onsubmit="return handleLogin(event)">
+        <div class="input-group">
+          <input type="email" id="loginEmail" required placeholder=" " />
+          <label for="loginEmail">Email</label>
+        </div>
+        <div class="input-group">
+          <input type="password" id="loginPassword" required placeholder=" " />
+          <label for="loginPassword">Password</label>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+
+    <!-- Sign Up Form -->
+    <div id="signup" class="form-container">
+      <h2>Create a New Account</h2>
+      <form id="signupForm" onsubmit="return handleSignUp(event)">
+        <div class="input-group">
+          <input type="text" id="signUpName" required placeholder=" " />
+          <label for="signUpName">Full Name</label>
+        </div>
+        <div class="input-group">
+          <input type="email" id="signUpEmail" required placeholder=" " />
+          <label for="signUpEmail">Email</label>
+        </div>
+        <div class="input-group">
+          <input type="password" id="signUpPassword" required placeholder=" " />
+          <label for="signUpPassword">Password</label>
+        </div>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
